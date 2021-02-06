@@ -1,7 +1,8 @@
-package pres.yao.YaoGameClient
+package pres.yao.yaogame.client
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import pres.yao.client.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

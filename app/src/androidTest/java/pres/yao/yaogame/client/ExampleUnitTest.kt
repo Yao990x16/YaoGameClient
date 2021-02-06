@@ -1,4 +1,4 @@
-package pres.yao.YaoGameClient
+package pres.yao.yaogame.client
 
 import org.junit.Test
 
