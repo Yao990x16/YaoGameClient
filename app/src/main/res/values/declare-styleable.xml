@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PersonalItemView">
+        <attr name="icon" format="reference"/>//设置左侧图标
+        <attr name="more" format="reference"/>//设置更多图标
+        <attr name="name" format="string"/>//左侧标题文字
+        <attr name="data" format="string"/>//右侧描述文字
+        <attr name="show_more" format="boolean"/>//是否显示右侧小箭头
+        <attr name="show_line" format="boolean"/>//是否显示下划线
+    </declare-styleable>
+</resources>

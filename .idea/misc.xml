@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisProjectProfileManager">
-    <option name="PROJECT_PROFILE" />
-    <option name="USE_PROJECT_LEVEL_SETTINGS" value="false" />
-    <list size="0" />
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/YaoGameClient/app/src/main/res/drawable/ic_vector_esports.xml" value="0.37447916666666664" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/drawable/ic_vector_esports_orange.xml" value="0.37447916666666664" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/drawable/ic_vector_gril.xml" value="0.38202247191011235" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/drawable/ic_vector_home.xml" value="0.37447916666666664" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/drawable/ic_vector_left.xml" value="0.2265625" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/drawable/ic_vector_mine_orange.xml" value="0.21145833333333333" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/drawable/ic_vector_sports.xml" value="0.21145833333333333" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.22636484687083888" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/layout-w936dp/activity_login.xml" value="0.21004098360655737" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/layout/e_sports_fragment.xml" value="0.19114583333333332" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/layout/home_fragment.xml" value="0.19114583333333332" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/layout/item_personal_menu.xml" value="1.1" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/layout/mine_fragment.xml" value="0.33" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/layout/navigation_fragments.xml" value="0.19114583333333332" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/layout/navigation_item.xml" value="0.27355072463768115" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/layout/register_fragment.xml" value="0.33" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/layout/sports_fragment.xml" value="0.19114583333333332" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/menu/navigation_items.xml" value="0.3541666666666667" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/xml/network_security_config.xml" value="0.2898550724637681" />
+      </map>
+    </option>
+  </component>
+  <component name="FindBugsConfigurable">
+    <option name="make" value="true" />
+    <option name="effort" value="default" />
+    <option name="priority" value="Medium" />
+    <option name="excludeFilter" value="" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$" />

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home"
+        android:title="@string/home"
+        android:icon="@drawable/ic_vector_home" />
+    <item android:id="@+id/esports"
+        android:title="@string/esports"
+        android:icon="@drawable/ic_vector_esports_orange" />
+    <item android:id="@+id/sports"
+        android:title="@string/sports"
+        android:icon="@drawable/ic_vector_sports" />
+    <item android:id="@+id/mine"
+        android:title="@string/mine"
+        android:icon="@drawable/ic_vector_mine_orange" />
+</menu>
