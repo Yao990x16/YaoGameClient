@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="pres.yao.yaogame.client.view.RegisterFragment">
+    tools:context="pres.yao.yaogame.client.view.RegisterActivity">
 
     <EditText
         android:id="@+id/username"
@@ -51,6 +51,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/register"
         android:text="@string/register"
         android:layout_marginTop="25dp"
         app:layout_constraintStart_toStartOf="parent"

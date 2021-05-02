@@ -7,9 +7,7 @@ import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
 
 interface ApiService {
-    companion object{
-        const val BASE_URL = "http://127.0.0.1:8181/"
-    }
+
     interface UserService{
         /**
          * 注册

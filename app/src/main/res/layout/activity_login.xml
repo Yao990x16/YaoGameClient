@@ -19,7 +19,7 @@
         android:layout_marginTop="96dp"
         android:autofillHints="@string/prompt_email"
         android:hint="@string/username"
-        android:inputType="textEmailAddress"
+        android:inputType="text"
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +42,6 @@
 
     <Button
         android:id="@+id/login"
-        android:enabled="false"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
@@ -58,28 +57,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/register"
-        android:enabled="false"
         android:layout_gravity="start"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="70dp"
         android:text="@string/register"
         app:layout_constraintTop_toBottomOf="@id/login"
         app:layout_constraintEnd_toEndOf="@id/login"
-        app:layout_constraintStart_toStartOf="@id/login"
-        app:layout_constraintVertical_bias="0.2" />
-
-    <ProgressBar
-        android:id="@+id/loading"
-        android:visibility="gone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="64dp"
-        android:layout_marginBottom="64dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/password"
-        app:layout_constraintStart_toStartOf="@+id/password"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
-
+        app:layout_constraintStart_toStartOf="@id/login" />
 </androidx.constraintlayout.widget.ConstraintLayout>

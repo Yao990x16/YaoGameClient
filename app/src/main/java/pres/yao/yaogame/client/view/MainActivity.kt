@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
 
         fragmentAdapter = FragmentAdapter(fragments, supportFragmentManager)
         viewPager.adapter = fragmentAdapter
-
         navigation.itemIconTintList = null
         navigation.setOnNavigationItemSelectedListener{
             when(it.itemId){

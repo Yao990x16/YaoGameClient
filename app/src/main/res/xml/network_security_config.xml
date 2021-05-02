@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<netwokr-security-config>
-    <base-config cleartextTrafficPermitted="true"/>
-</netwokr-security-config>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>
