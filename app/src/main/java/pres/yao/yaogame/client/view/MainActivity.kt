@@ -2,11 +2,13 @@ package pres.yao.yaogame.client.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import pres.yao.client.R
 import pres.yao.client.databinding.ActivityMainBinding
 import pres.yao.yaogame.client.adapter.FragmentAdapter
+import pres.yao.yaogame.client.model.data.User
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,6 +33,16 @@ class MainActivity : AppCompatActivity() {
 
         fragmentAdapter = FragmentAdapter(fragments, supportFragmentManager)
         viewPager.adapter = fragmentAdapter
+        val fragmentFlag = intent.getIntExtra("fragment_flag",1)
+        val userInfo = intent.getParcelableExtra<User>("User")
+        val minefragement= fragments[3]
+        val bundle = Bundle()
+        if (fragmentFlag==3){
+            viewPager.currentItem=3
+            bundle.putParcelable("User",userInfo)
+            minefragement.arguments=bundle
+            Log.e("bundle",bundle.toString())
+        }
         navigation.itemIconTintList = null
         navigation.setOnNavigationItemSelectedListener{
             when(it.itemId){

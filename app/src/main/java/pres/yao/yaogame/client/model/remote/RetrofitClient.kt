@@ -14,7 +14,9 @@ class RetrofitClient {
         fun <T> getService(url: String, service: Class<T>): T{
             return createRetrofit(url).create(service)
         }
-
+        fun <T> getService(service: Class<T>): T{
+            return createRetrofit(BASE_URL).create(service)
+        }
         private fun createRetrofit(url: String): Retrofit{
             val okHttpClient = OkHttpClient.Builder()
                 //请求超时,限定app在某个指定的时间内得到响应结果,如果未得到则超时
@@ -32,6 +34,6 @@ class RetrofitClient {
                     .build()
         }
 
-        const val BASE_URL = "http://10.3.116.236:8181/"
+        private const val BASE_URL = "http://192.168.123.161:8181/"
     }
 }
