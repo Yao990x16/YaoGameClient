@@ -26,7 +26,7 @@ class MineFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         viewBinding = MineFragmentBinding.inflate(layoutInflater, container, false)
         Log.e("fragOncreview",arguments.toString())
         return binding.root
@@ -54,11 +54,10 @@ class MineFragment : Fragment() {
             }else{
                 username=null
                 email=null
-                binding.mineEmail.setData("")
-                binding.mineUsername.setData("")
+                binding.mineEmail.setData(username)
+                binding.mineUsername.setData(email)
                 binding.mineLoginOrOut.text="登录"
             }
-
         }
     }
 

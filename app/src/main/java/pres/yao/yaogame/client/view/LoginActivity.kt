@@ -20,7 +20,6 @@ class LoginActivity : AppCompatActivity() {
         setContentView(viewBinding.root)
 
         mViewModel = UserViewModel()
-
         viewBinding.login.setOnClickListener {
             mViewModel.login(viewBinding.username.text.toString(),viewBinding.password.text.toString())
                 .subscribe{

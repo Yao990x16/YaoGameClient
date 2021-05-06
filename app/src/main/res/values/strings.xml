@@ -18,4 +18,5 @@
     <string name="sports">体育</string>
     <string name="esports">电竞</string>
     <string name="mine">我的</string>
+    <string name="competition_subscribe">订阅</string>
 </resources>

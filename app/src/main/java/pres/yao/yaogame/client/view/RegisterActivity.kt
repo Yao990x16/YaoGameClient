@@ -45,7 +45,6 @@ class RegisterActivity : AppCompatActivity() {
             }else{
                 Toast.makeText(this,"输入框不能为空",Toast.LENGTH_LONG).show()
             }
-
         }
     }
 }

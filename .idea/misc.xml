@@ -15,9 +15,14 @@
         <entry key="..\:/YaoGameClient/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/YaoGameClient/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/YaoGameClient/app/src/main/res/layout/activity_register.xml" value="0.29257246376811596" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/layout/competition_rv_row_desc_item.xml" value="0.33" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/layout/competition_rv_row_item.xml" value="0.33" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/layout/competition_rv_row_match_item.xml" value="0.33" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/layout/competition_rv_row_root_item.xml" value="0.2563405797101449" />
         <entry key="..\:/YaoGameClient/app/src/main/res/layout/e_sports_fragment.xml" value="0.19114583333333332" />
         <entry key="..\:/YaoGameClient/app/src/main/res/layout/home_fragment.xml" value="0.19114583333333332" />
-        <entry key="..\:/YaoGameClient/app/src/main/res/layout/item_personal_menu.xml" value="0.5" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/layout/item.xml" value="0.1715438950554995" />
+        <entry key="..\:/YaoGameClient/app/src/main/res/layout/item_personal_menu.xml" value="0.75" />
         <entry key="..\:/YaoGameClient/app/src/main/res/layout/mine_fragment.xml" value="0.33" />
         <entry key="..\:/YaoGameClient/app/src/main/res/layout/navigation_fragments.xml" value="0.19114583333333332" />
         <entry key="..\:/YaoGameClient/app/src/main/res/layout/navigation_item.xml" value="0.27355072463768115" />
