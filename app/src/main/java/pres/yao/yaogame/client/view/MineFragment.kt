@@ -8,18 +8,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import pres.yao.client.R
 import pres.yao.client.databinding.MineFragmentBinding
-import pres.yao.yaogame.client.model.data.User
-import pres.yao.yaogame.client.viewmodel.MineViewModel
-import pres.yao.yaogame.client.viewmodel.UserViewModel
 
 class MineFragment : Fragment() {
 
     companion object {
         fun newInstance() = MineFragment()
     }
-
-    private lateinit var viewModel: MineViewModel
 
     private var viewBinding: MineFragmentBinding? = null
     private val binding get() = viewBinding!!
@@ -35,7 +31,6 @@ class MineFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(MineViewModel::class.java)
         /*val bundle = arguments
         var email = bundle?.getParcelable<User>("User")?.email
         var username = bundle?.getParcelable<User>("User")?.username*/
@@ -44,7 +39,7 @@ class MineFragment : Fragment() {
         if (LoginActivity.userName!=null){
             binding.mineLoginOrOut.text = "注销"
             binding.mineSubscription.setOnClickListener {
-                val intent = Intent(activity, LoginActivity::class.java)
+                val intent = Intent(activity, MainActivity::class.java)
                 startActivity(intent)
             }
         }

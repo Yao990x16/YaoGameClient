@@ -136,7 +136,7 @@ class CompetitionDescAdapter(private val competitionList: List<Competition>):
         //getTag()获取数据
         val position = v.tag as Int
         if (mOnItemClickListener != null) {
-            if (v.id == R.id.rcv_desc) {
+            if (v.id==R.id.rcv_home_frg && v.id == R.id.rcv_esports_frg && v.id==R.id.rcv_sports_frg) {
                 mOnItemClickListener!!.onItemClick(v, ViewName.PRACTISE, position)
             } else {
                 mOnItemClickListener!!.onItemClick(v, ViewName.ITEM, position)
