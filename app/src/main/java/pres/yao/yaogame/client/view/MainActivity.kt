@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.activity_main)
         viewBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
 
@@ -34,14 +33,20 @@ class MainActivity : AppCompatActivity() {
         fragmentAdapter = FragmentAdapter(fragments, supportFragmentManager)
         viewPager.adapter = fragmentAdapter
         val fragmentFlag = intent.getIntExtra("fragment_flag",1)
-        val userInfo = intent.getParcelableExtra<User>("User")
-        val minefragement= fragments[3]
-        val bundle = Bundle()
+       /* val userInfo = intent.getParcelableExtra<User>("User")
+        val homeFragment = fragments[0]
+        val eSportsFragment = fragments[1]
+        val sportsFragment = fragments[2]
+        val mineFragment = fragments[3]
+        val bundle = Bundle()*/
         if (fragmentFlag==3){
             viewPager.currentItem=3
-            bundle.putParcelable("User",userInfo)
-            minefragement.arguments=bundle
-            Log.e("bundle",bundle.toString())
+            navigation.menu.getItem(3).isChecked = true
+            /*bundle.putParcelable("User",userInfo)
+            mineFragment.arguments=bundle
+            homeFragment.arguments=bundle
+            eSportsFragment.arguments=bundle
+            sportsFragment.arguments=bundle*/
         }
         navigation.itemIconTintList = null
         navigation.setOnNavigationItemSelectedListener{

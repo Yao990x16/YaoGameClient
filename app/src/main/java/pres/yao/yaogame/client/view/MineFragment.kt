@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import pres.yao.client.databinding.MineFragmentBinding
 import pres.yao.yaogame.client.model.data.User
 import pres.yao.yaogame.client.viewmodel.MineViewModel
+import pres.yao.yaogame.client.viewmodel.UserViewModel
 
 class MineFragment : Fragment() {
 
@@ -35,12 +36,12 @@ class MineFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(MineViewModel::class.java)
-        val bundle = arguments
+        /*val bundle = arguments
         var email = bundle?.getParcelable<User>("User")?.email
-        var username = bundle?.getParcelable<User>("User")?.username
-        binding.mineEmail.setData(email)
-        binding.mineUsername.setData(username)
-        if (username!=null){
+        var username = bundle?.getParcelable<User>("User")?.username*/
+        binding.mineEmail.setData(LoginActivity.userEmail)
+        binding.mineUsername.setData(LoginActivity.userName)
+        if (LoginActivity.userName!=null){
             binding.mineLoginOrOut.text = "注销"
             binding.mineSubscription.setOnClickListener {
                 val intent = Intent(activity, LoginActivity::class.java)
@@ -52,10 +53,12 @@ class MineFragment : Fragment() {
                 val intent = Intent(activity, LoginActivity::class.java)
                 startActivity(intent)
             }else{
-                username=null
-                email=null
-                binding.mineEmail.setData(username)
-                binding.mineUsername.setData(email)
+                /*username=null
+                email=null*/
+                LoginActivity.userName=null
+                LoginActivity.userEmail=null
+                binding.mineEmail.setData(LoginActivity.userName)
+                binding.mineUsername.setData(LoginActivity.userEmail)
                 binding.mineLoginOrOut.text="登录"
             }
         }

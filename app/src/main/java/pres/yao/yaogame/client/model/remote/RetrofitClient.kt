@@ -21,6 +21,8 @@ class RetrofitClient {
                 //请求超时,限定app在某个指定的时间内得到响应结果,如果未得到则超时
                 //callTimeout的计时器横跨整个请求,直到客户端完全读取响应内容
                 .callTimeout(30,TimeUnit.SECONDS)
+                .readTimeout(30,TimeUnit.SECONDS)
+                .writeTimeout(30,TimeUnit.SECONDS)
                 .build()
 
             return Retrofit.Builder()
@@ -33,6 +35,6 @@ class RetrofitClient {
                     .build()
         }
 
-        private const val BASE_URL = "http://192.168.123.161:8181/"
+        private const val BASE_URL = "http://10.0.2.2:8181/"
     }
 }

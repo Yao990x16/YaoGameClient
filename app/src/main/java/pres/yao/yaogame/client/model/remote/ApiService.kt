@@ -30,64 +30,64 @@ interface ApiService {
             @Field("username")username: String,
             @Field("password")password: String
         ): Observable<User>
+    }
 
+    interface Subscribe{
         /**
          * 用户订阅比赛
          */
         @FormUrlEncoded
         @POST("subscription/subsComp")
-        fun userSubscribe(
+        fun toUserSubscribe(
             @Field("userName")userName: String,
-            @Field("compId")compId: Int
+            @Field("competitionId")competitionId: String
         ): Observable<UserSubs>
 
         /**
          * 用户取消比赛订阅
          */
         @FormUrlEncoded
-        @POST("subscription/subsComp")
-        fun userCancelSubscribe(
+        @POST("subscription/deleteByCompId")
+        fun toUserCancelSubscribe(
             @Field("userName")userName: String,
-            @Field("compId")compId: Int
+            @Field("competitionId")competitionId: String
+        ): Observable<UserSubs>
+
+        /**
+         *
+         */
+        @GET("subscription/getByUserNameAndCompId")
+        fun getByUserNameAndCompId(
+            @Query("userName")userName: String,
+            @Query("competitionId")competitionId: String
         ): Observable<UserSubs>
 
         /**
          * 用户查看订阅列表
          */
-        @GET("subscription/getSubsList")
-        fun userSubsList(
+        @GET("subscription/getCompsByUserName")
+        fun getUserSubsList(
             @Query("userName")userName: String
         ): Observable<List<Competition>>
+
+        /**
+         * 根据开始时间(yy-mm-dd)和比赛队伍获取对应的预测信息
+         */
+        @GET("NBAForecast/getBySTimeAndTeam")
+        fun getForecastInfoBySTimeAndTeam(
+            @Query("startTime")startTime: String,
+            @Query("teamName")teamName: String,
+        ): Observable<NBAForecast>
     }
 
     interface CompetitionService{
         /**
          * 根据日期(yy-mm-dd)和赛事类型获取比赛的赛程
          */
-        @GET
-        fun getScheduleByDate(
-            @Query("startTime")startTime: String,
-            @Query("gameType")gameType: String
+        @GET("competition/getByCompTypeAndSTimeLike")
+        fun getScheduleByDateAndType(
+            @Query("sTime")startTime: String,
+            @Query("compType")gameType: String
         ): Observable<List<Competition>>
-
-        /**
-         * 根据赛事类型获取比赛赛程
-         */
-        @GET
-        fun getScheduleByGameType(
-            @Query("gameType")gameType: String
-        ): Observable<List<Competition>>
-    }
-
-    interface NBAForecastService{
-        /**
-         * 根据开始时间(yy-mm-dd s:f)和比赛队伍获取对应的预测信息
-         */
-        @GET
-        fun getForecastInfoBySTimeAndTeam(
-            @Query("startTime")startTime: String,
-            @Query("leftTeamName")leftTeamName: String,
-            @Query("rightTeamName")rightTeamName: String
-        ): Observable<NBAForecast>
     }
 }

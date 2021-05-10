@@ -10,7 +10,10 @@ import pres.yao.yaogame.client.model.data.User
 import pres.yao.yaogame.client.viewmodel.UserViewModel
 
 class LoginActivity : AppCompatActivity() {
-
+    companion object{
+        var userName: String? = null
+        var userEmail: String? = null
+    }
     private lateinit var viewBinding: ActivityLoginBinding
     private lateinit var mViewModel: UserViewModel
 
@@ -29,9 +32,12 @@ class LoginActivity : AppCompatActivity() {
                     }else if (it.msg == "ok"){
                         Log.e("LoginActivityOk", it.toString())
                         val intent = Intent(this, MainActivity::class.java)
-                        val userInfo: User = it
                         intent.putExtra("fragment_flag",3)
-                        intent.putExtra("User",userInfo)
+                        userName = it.username.toString()
+                        userEmail = it.email.toString()
+                        Log.e("userNameonCreate", userName!!)
+                        /*val userInfo: User = it
+                        intent.putExtra("User",userInfo)*/
                         startActivity(intent)
                         finish()
                     }

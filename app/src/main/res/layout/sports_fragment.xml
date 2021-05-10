@@ -5,11 +5,11 @@
     android:layout_height="match_parent"
     tools:context="pres.yao.yaogame.client.view.SportsFragment">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="体育"
-        android:textSize="60sp"
-        android:gravity="center"/>
+        android:layout_marginBottom="50dp"
+        android:id="@+id/rcv_sports_frg"/>
+
 
 </FrameLayout>

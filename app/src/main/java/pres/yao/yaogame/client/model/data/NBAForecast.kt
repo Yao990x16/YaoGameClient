@@ -5,4 +5,4 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class NBAForecast(var startTime: String?, var winTeam: String?, var loseTeam: String?,
-                       var porbability: String?, var msg: String?) : Parcelable
+                       var probability: String?, var msg: String?) : Parcelable

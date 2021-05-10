@@ -8,8 +8,8 @@ import pres.yao.yaogame.client.model.remote.ApiService
 import pres.yao.yaogame.client.model.remote.RetrofitClient
 
 class UserViewModel {
-    private val remote = RetrofitClient.getService(ApiService.UserService::class.java)
 
+    private val remote = RetrofitClient.getService(ApiService.UserService::class.java)
     fun login(username: String, password: String): Observable<User> {
         return remote.toLogin(username, password)
             .subscribeOn(Schedulers.io())
